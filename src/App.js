@@ -1,7 +1,11 @@
 import './App.css';
+import {Plants} from "./Plants"
 
 function App() {
-  const name = <h1>Kongmeng Lor</h1>
+  const p = [
+    {name: "Mars", isGasPlanet: false},{name: "Earth", isGasPlanet: false},{name: "Jupiter", isGasPlanet: true}
+  ]
+
   // return <div className='App'>
   //     <Job salary={90000} position="Senior SDE" company="Amazon" />
   //     <Job salary={12000} position="Junior SDW" company="Google" />
@@ -9,7 +13,11 @@ function App() {
   // </div>
 
   return <div className='App'>
-  
+    {
+      p.map((name, key) => {
+        return <Plants name={p.name} age={p.isGasPlanet} />
+      })
+    }
   </div>
 }
 
